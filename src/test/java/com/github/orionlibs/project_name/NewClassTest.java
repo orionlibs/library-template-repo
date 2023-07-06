@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @ContextConfiguration(classes = FakeTestingSpringConfiguration.FakeConfiguration.class)
 @WebAppConfiguration
 @TestInstance(Lifecycle.PER_CLASS)
-public class LoggingInterceptorTest
+public class NewClassTest
 {
     private MockMvc mockMvc;
 
@@ -33,7 +33,7 @@ public class LoggingInterceptorTest
     @BeforeEach
     void setUp()
     {
-        LoggingInterceptorTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-library-name.prop");
+        NewClassTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-library-name.prop");
         mockMvc = MockMvcBuilders
                         .standaloneSetup(new MockController())
                         .addInterceptors(new NewClass())
