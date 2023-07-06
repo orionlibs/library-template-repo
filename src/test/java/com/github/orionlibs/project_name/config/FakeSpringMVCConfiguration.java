@@ -1,6 +1,6 @@
-package com.github.orionlibs.project-name.config;
+package com.github.orionlibs.project_name.config;
 
-import com.github.orionlibs.project-name.NewClass;
+import com.github.orionlibs.project_name.NewClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

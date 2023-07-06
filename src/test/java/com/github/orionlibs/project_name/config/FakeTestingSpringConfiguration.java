@@ -1,4 +1,4 @@
-package com.github.orionlibs.project-name.config;
+package com.github.orionlibs.project_name.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

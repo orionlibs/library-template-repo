@@ -1,12 +1,12 @@
-package com.github.orionlibs.project-name;
+package com.github.orionlibs.project_name;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.github.orionlibs.project-name.config.FakeTestingSpringConfiguration;
-import com.github.orionlibs.project-name.config.MockController;
-import com.github.orionlibs.project-name.NewClass;
+import com.github.orionlibs.project_name.config.FakeTestingSpringConfiguration;
+import com.github.orionlibs.project_name.config.MockController;
+import com.github.orionlibs.project_name.NewClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
