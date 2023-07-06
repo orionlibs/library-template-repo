@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.orionlibs</groupId>
-    <artifactId>spring-http-request-logger</artifactId>
+    <artifactId>project-name</artifactId>
     <version>0.0.1</version>
-    <name>Spring HTTP Request Logger</name>
-    <description>A Spring plugin that implements an MVC interceptor that logs all HTTP requests</description>
-    <url>https://github.com/orionlibs/spring-http-request-logger</url>
+    <name>name</name>
+    <description>description</description>
+    <url>https://github.com/orionlibs/repo</url>
     
     
     <properties>
@@ -19,9 +19,9 @@
 
 
     <scm>
-        <url>https://github.com/orionlibs/spring-http-request-logger</url>
-        <connection>scm:git:https://github.com/orionlibs/spring-http-request-logger.git</connection>
-        <developerConnection>scm:git:ssh://github.com/orionlibs/spring-http-request-logger.git</developerConnection>
+        <url>https://github.com/orionlibs/repo</url>
+        <connection>scm:git:https://github.com/orionlibs/repo.git</connection>
+        <developerConnection>scm:git:ssh://github.com/orionlibs/repo.git</developerConnection>
     </scm>
 
 
