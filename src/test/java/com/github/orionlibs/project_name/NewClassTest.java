@@ -36,7 +36,6 @@ public class NewClassTest
         NewClassTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-library-name.prop");
         mockMvc = MockMvcBuilders
                         .standaloneSetup(new MockController())
-                        .addInterceptors(new NewClass())
                         .build();
     }
 
