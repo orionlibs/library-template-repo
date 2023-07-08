@@ -1,17 +1,15 @@
-package com.github.orionlibs.project_name.config;
+package io.github.orionlibs.project_name.config;
 
-import com.github.orionlibs.project_name.NewClass;
+import io.github.orionlibs.project_name.NewClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages =
-                {"com.github.orionlibs"})
+                {"io.github.orionlibs"})
 public class FakeSpringMVCConfiguration
 {
     @Bean

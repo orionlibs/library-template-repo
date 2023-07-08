@@ -1,18 +1,12 @@
-package com.github.orionlibs.project_name;
+package io.github.orionlibs.project_name;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import com.github.orionlibs.project_name.config.ConfigurationService;
-import com.github.orionlibs.project_name.config.FakeTestingSpringConfiguration;
-import com.github.orionlibs.project_name.config.MockController;
-import com.github.orionlibs.project_name.log.ListLogHandler;
+import io.github.orionlibs.project_name.config.FakeTestingSpringConfiguration;
+import io.github.orionlibs.project_name.config.MockController;
+import io.github.orionlibs.project_name.log.ListLogHandler;
 import java.io.IOException;
 import java.util.logging.LogManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -40,7 +34,7 @@ public class NewClassTest
         try
         {
             listLogHandler = new ListLogHandler();
-            LogManager.getLogManager().readConfiguration(NewClassTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-logger.prop"));
+            LogManager.getLogManager().readConfiguration(NewClassTest.class.getResourceAsStream("/io/github/orionlibs/project-name/configuration/orion-logger.prop"));
             NewClass.addLogHandler(listLogHandler);
             mockMvc = MockMvcBuilders
                             .standaloneSetup(new MockController())

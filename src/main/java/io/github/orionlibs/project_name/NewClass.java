@@ -1,7 +1,7 @@
-package com.github.orionlibs.project_name;
+package io.github.orionlibs.project_name;
 
-import com.github.orionlibs.project_name.config.ConfigurationService;
-import com.github.orionlibs.project_name.config.OrionConfiguration;
+import io.github.orionlibs.project_name.config.ConfigurationService;
+import io.github.orionlibs.project_name.config.OrionConfiguration;
 import java.io.IOException;
 import java.util.logging.Handler;
 import java.util.logging.LogManager;

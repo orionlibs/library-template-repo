@@ -1,4 +1,4 @@
-package com.github.orionlibs.project_name.config;
+package io.github.orionlibs.project_name.config;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
