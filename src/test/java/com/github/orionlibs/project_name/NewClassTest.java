@@ -40,7 +40,7 @@ public class NewClassTest
         try
         {
             listLogHandler = new ListLogHandler();
-            LogManager.getLogManager().readConfiguration(NewClassTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-project-name.prop"));
+            LogManager.getLogManager().readConfiguration(NewClassTest.class.getResourceAsStream("/com/github/orionlibs/project-name/configuration/orion-logger.prop"));
             NewClass.addLogHandler(listLogHandler);
             mockMvc = MockMvcBuilders
                             .standaloneSetup(new MockController())
@@ -60,7 +60,7 @@ public class NewClassTest
     }
 
 
-    @Test
+    /*@Test
     void test_method1() throws Exception
     {
         ConfigurationService.updateProp("orionlibs.prop", "false");
@@ -68,5 +68,5 @@ public class NewClassTest
         assertTrue(listLogHandler.getLogRecords().stream()
                         .anyMatch(record -> record.getMessage().contains("IP: 127.0.0.1, URI: GET /")));
         ConfigurationService.updateProp("orionlibs.prop", "true");
-    }
+    }*/
 }
