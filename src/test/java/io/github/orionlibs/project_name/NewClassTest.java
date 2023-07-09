@@ -1,5 +1,9 @@
 package io.github.orionlibs.project_name;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import io.github.orionlibs.project_name.config.FakeTestingSpringConfiguration;
 import io.github.orionlibs.project_name.config.MockController;
 import io.github.orionlibs.project_name.log.ListLogHandler;
@@ -54,13 +58,13 @@ public class NewClassTest
     }
 
 
-    /*@Test
+    @Test
     void test_method1() throws Exception
     {
-        ConfigurationService.updateProp("orionlibs.prop", "false");
+        //ConfigurationService.updateProp("orionlibs.prop", "false");
         mockMvc.perform(get("/")).andExpect(status().isOk());
         assertTrue(listLogHandler.getLogRecords().stream()
-                        .anyMatch(record -> record.getMessage().contains("IP: 127.0.0.1, URI: GET /")));
-        ConfigurationService.updateProp("orionlibs.prop", "true");
-    }*/
+                        .anyMatch(record -> record.getMessage().contains("hello world")));
+        //ConfigurationService.updateProp("orionlibs.prop", "true");
+    }
 }
