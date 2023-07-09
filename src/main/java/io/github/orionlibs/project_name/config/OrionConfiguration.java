@@ -72,16 +72,21 @@ public class OrionConfiguration extends Properties
         boolean doesSpringEnvExist = springEnv != null;
         for(Map.Entry<Object, Object> prop : tempProperties.entrySet())
         {
+            String key = (String)prop.getKey();
             String value = null;
             if(doesSpringEnvExist)
             {
-                value = springEnv.getProperty((String)prop.getKey());
+                value = springEnv.getProperty(key);
                 if(value == null)
                 {
                     value = (String)prop.getValue();
                 }
             }
-            allProperties.put((String)prop.getKey(), value);
+            else
+            {
+                value = (String)prop.getValue();
+            }
+            allProperties.put(key, value);
         }
         putAll(allProperties);
     }
