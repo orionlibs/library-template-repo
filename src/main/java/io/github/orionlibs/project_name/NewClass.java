@@ -9,7 +9,9 @@ import java.util.logging.Logger;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
+@Component
 @NoArgsConstructor
 public class NewClass
 {
@@ -47,5 +49,11 @@ public class NewClass
     static void removeLogHandler(Handler handler)
     {
         log.removeHandler(handler);
+    }
+    
+    
+    public static void test()
+    {
+        log.info("hello world");
     }
 }
