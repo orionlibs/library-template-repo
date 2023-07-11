@@ -10,6 +10,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 @TestInstance(Lifecycle.PER_CLASS)
+//@Execution(ExecutionMode.CONCURRENT)
 public class NewClassTest
 {
     private ListLogHandler listLogHandler;
