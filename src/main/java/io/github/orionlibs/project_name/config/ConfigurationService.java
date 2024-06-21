@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_iot.config;
+package io.github.orionlibs.project_name.config;
 
 import java.io.IOException;
 
