@@ -63,6 +63,17 @@ public class ConfigurationService
     {
         return Boolean.parseBoolean(configurationRegistry.getProperty(key));
     }
+    
+    
+    /**
+     * retrieves the value associated with the provided key as an integer
+     * @param key
+     * @return
+     */
+    public static int getIntegerProp(String key)
+    {
+        return Integer.parseInt(configurationRegistry.getProperty(key));
+    }
 
 
     /**
