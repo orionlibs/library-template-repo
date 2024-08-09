@@ -180,6 +180,7 @@
                 <version>10.0.3</version>
                 <configuration>
                     <nvdApiServerId>nvdserver</nvdApiServerId>
+                    <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
                 </configuration>
                 <executions>
                     <execution>
