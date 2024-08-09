@@ -4,3 +4,4 @@ git switch $1
 git tag -a $2 -m "created release tag"
 git push origin $2
 mvn -s C:/Users/neo/.m2/settingsMavenCentral.xml clean deploy
+git switch main
