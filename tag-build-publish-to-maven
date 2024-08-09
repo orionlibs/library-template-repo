@@ -1,4 +1,5 @@
 #!/bin/bash
+#$ ./tag-build-publish-to-maven release/1.0.0 v1.0.0
 git switch $1
 git tag -a $2 -m "created release tag"
 git push origin $2
