@@ -18,6 +18,12 @@ public class OrionConfiguration extends Properties
     public static final String FEATURE_CONFIGURATION_FILE = "/io/github/orionlibs/project-name/configuration/orion-feature-configuration.prop";
 
 
+    public void loadFeatureConfiguration(InputStream customConfigStream) throws IOException
+    {
+        load(customConfigStream);
+    }
+
+
     public static OrionConfiguration loadFeatureConfiguration(Properties customConfig) throws IOException
     {
         OrionConfiguration featureConfiguration = new OrionConfiguration();

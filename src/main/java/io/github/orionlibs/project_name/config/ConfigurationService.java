@@ -1,6 +1,7 @@
 package io.github.orionlibs.project_name.config;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 /**
@@ -22,7 +23,7 @@ public class ConfigurationService
         {
             try
             {
-                registerConfiguration(OrionConfiguration.loadFeatureConfiguration(null));
+                registerConfiguration(OrionConfiguration.loadFeatureConfiguration((Properties)null));
             }
             catch(IOException e)
             {
@@ -30,6 +31,16 @@ public class ConfigurationService
             }
             moduleInitialised = true;
         }
+    }
+
+
+    /**
+     * registers custom config
+     * @param customConfigStream
+     */
+    public static void registerConfiguration(InputStream customConfigStream) throws IOException
+    {
+        configurationRegistry.loadFeatureConfiguration(customConfigStream);
     }
 
 
@@ -63,8 +74,8 @@ public class ConfigurationService
     {
         return Boolean.parseBoolean(configurationRegistry.getProperty(key));
     }
-    
-    
+
+
     /**
      * retrieves the value associated with the provided key as an integer
      * @param key
