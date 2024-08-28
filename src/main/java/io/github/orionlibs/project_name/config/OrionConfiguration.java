@@ -73,7 +73,10 @@ public class OrionConfiguration extends Properties
             String value = (String)prop.getValue();
             allProperties.put(key, value);
         }
-        allProperties.load(defaultConfiguration);
+        if(defaultConfiguration != null)
+        {
+            allProperties.load(defaultConfiguration);
+        }
         putAll(allProperties);
         loadCustomConfiguration(customConfig);
     }
