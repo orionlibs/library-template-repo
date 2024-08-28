@@ -45,6 +45,16 @@ public class ConfigurationService
 
 
     /**
+     * registers custom config
+     * @param customConfigFile
+     */
+    public static void registerConfiguration(String customConfigFile) throws IOException
+    {
+        configurationRegistry.loadFeatureConfiguration(customConfigFile);
+    }
+
+
+    /**
      * stores a config object
      * @param configuration
      */
@@ -84,6 +94,17 @@ public class ConfigurationService
     public static int getIntegerProp(String key)
     {
         return Integer.parseInt(configurationRegistry.getProperty(key));
+    }
+
+
+    /**
+     * retrieves the value associated with the provided key as an float
+     * @param key
+     * @return
+     */
+    public static float getFloatProp(String key)
+    {
+        return Float.parseFloat(configurationRegistry.getProperty(key));
     }
 
 
