@@ -15,7 +15,7 @@ public class OrionConfiguration extends Properties
     /**
      * The location of the configuration file that has configuration for the features of this plugin.
      */
-    public static final String FEATURE_CONFIGURATION_FILE = "/io/github/orionlibs/project-name/configuration/orion-feature-configuration.prop";
+    public static final String FEATURE_CONFIGURATION_FILE = "/io/github/orionlibs/project_name/configuration/orion-feature-configuration.prop";
 
 
     public void loadFeatureConfiguration(InputStream customConfigStream) throws IOException
@@ -35,7 +35,23 @@ public class OrionConfiguration extends Properties
         }
         catch(IOException e)
         {
-            throw new IOException("Could not setup feature configuration for project-name: ", e);
+            throw new IOException("Could not setup feature configuration for project_name: ", e);
+        }
+    }
+
+
+    public static OrionConfiguration loadFeatureConfiguration(String customConfigFile) throws IOException
+    {
+        OrionConfiguration featureConfiguration = new OrionConfiguration();
+        InputStream defaultConfigStream = OrionConfiguration.class.getResourceAsStream(customConfigFile);
+        try
+        {
+            featureConfiguration.loadCustomConfiguration(defaultConfigStream);
+            return featureConfiguration;
+        }
+        catch(IOException e)
+        {
+            throw new IOException("Could not setup feature configuration for project_name: ", e);
         }
     }
 
@@ -58,6 +74,22 @@ public class OrionConfiguration extends Properties
             allProperties.put(key, value);
         }
         allProperties.load(defaultConfiguration);
+        putAll(allProperties);
+        loadCustomConfiguration(customConfig);
+    }
+
+
+    public void loadCustomConfiguration(InputStream customConfig) throws IOException
+    {
+        Properties allProperties = new Properties();
+        allProperties.load(customConfig);
+        putAll(allProperties);
+    }
+
+
+    public void loadCustomConfiguration(Properties customConfig)
+    {
+        Properties allProperties = new Properties();
         if(customConfig != null)
         {
             for(Map.Entry<Object, Object> prop : customConfig.entrySet())
