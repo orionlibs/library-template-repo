@@ -12,7 +12,7 @@ public class ATest
         System.setProperty("active.execution.profile", OrionDomain.testing);
     }
 
-    protected String loadJSONTestResource(String fileLocation)
+    protected String loadResourceAsString(String fileLocation)
     {
         try
         {
